@@ -1,0 +1,21 @@
+name = "lead-bot"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+# Готовые списки, которые собирает GitHub Actions
+DATA_URL = "https://raw.githubusercontent.com/dsedrtd/lead-bot/main/data"
+
+# Секреты задаются командами (не в этом файле):
+#   npx wrangler@4 secret put BOT_TOKEN
+#   npx wrangler@4 secret put WEBHOOK_SECRET
+#   npx wrangler@4 secret put OWNER_ID
+
+# Класс Search (старый вариант поиска) больше не нужен
+[[durable_objects.bindings]]
+name = "SEARCH"
+class_name = "Search"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Search"]
