@@ -4,7 +4,7 @@ compatibility_date = "2026-01-01"
 
 [vars]
 # Готовые списки, которые собирает GitHub Actions
-DATA_URL = "https://raw.githubusercontent.com/dsedrtd/lead-bot/main/data"
+DATA_URL = "https://raw.githubusercontent.com/Dsedrtd/lead-bot/main/data"
 
 # Секреты задаются командами (не в этом файле):
 #   npx wrangler@4 secret put BOT_TOKEN
